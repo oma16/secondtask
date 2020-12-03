@@ -14,10 +14,11 @@ function interestcalculator(param){
     
     
     
-    for(i = 0; i < param.length; i++){
+  for(i = 0; i < param.length; i++){
         param[i].rate = [];
 
-    if(param[i].principal >= 2500 && param[i].time > 1 && param[i].time < 3){
+    if(param[i].principal >= 2500 && param[i].time > 1
+         && param[i].time < 3){
         
        param[i].rate = 3;
        
@@ -34,34 +35,24 @@ function interestcalculator(param){
     else {
         param[i].rate = 1;
         
-    
     }
     console.log(data[i].rate);
     
-    
-    
           } 
 
-         
-         
     for(i = 0; i <data.length; i++){
          data[i].interest = [];
-          data[i].interest = (data[i].principal * data[i].time * data[i].rate)/100
+ data[i].interest = (data[i].principal * data[i].time * data[i].rate)/100;
            
-          console.log(data[i].interest)
-          
-          
+          console.log(data[i].interest);
+             
     }
     
-         
     var interestdata = [];
     var interestdata = data;
     console.log(interestdata);
-
     return interestdata; 
-
-
-        } 
+   } 
     
     interestcalculator(data);
 
